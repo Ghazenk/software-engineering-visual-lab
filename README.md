@@ -1,78 +1,54 @@
-# Software Engineering, Made Visual
+# Software engineering · field guide
 
-An interactive, beginner-friendly **HTML presentation** about:
+A 30-slide classroom presentation on four topics:
 
-1. **Data Flow Diagrams (DFDs)** — meaning, symbols, levels, context diagrams, Level 1 decomposition, rules, and a guided patient-data simulation.
-2. **Extreme Programming (XP)** — definition, workflow, values, 12 classic practices, TDD, pair programming, continuous integration, and trade-offs.
-3. **Scrum** — the Scrum Team, accountabilities, artifacts, commitments, events, a Sprint timeline, a working task board, and a Definition of Done activity.
-4. **The 14 principles of XP** — all principles from *Extreme Programming Explained*, second edition, with practical examples.
+1. Data Flow Diagrams (DFDs)
+2. Extreme Programming (XP)
+3. Scrum
+4. The 14 principles of XP
 
-The presentation teaches the topics through one fictional case study: **MediLab**, a lab-management system. The demo contains **no real patient information**.
+The same fictional laboratory management system, **MediLab**, is used in every chapter.
 
-## Start
+## Open the presentation
 
-Open `index.html` in your browser. There are **no dependencies, build commands, or npm installs**.
+Open `index.html` in a browser. No dependencies, server, or build step are required.
 
-For a convenient local web server (optional):
+- Left/right arrows: previous/next slide
+- **G**: table of contents
+- **P**: speaker notes with teaching explanations
+- **F**: fullscreen
+- **R**: reset the current interactive example
+- **PowerPoint** button: download the static `.pptx` edition
 
-```bash
-python3 -m http.server 8000
-```
+Interactive examples include the context DFD, data movement across a DFD, TDD, XP workflow, pair programming, continuous integration, a Scrum task board, Definition of Done and decision exercises.
 
-Visit `http://localhost:8000`.
+## PowerPoint edition
 
-## Keyboard controls
+`software-engineering-presentation.pptx` contains one 16:9 slide for each of the 30 HTML slides, plus presenter notes. It preserves the slide appearance as screenshots. PowerPoint cannot run the JavaScript simulations; the screenshots show representative simulation states. This edition is suitable for offline teaching. For live demonstrations, use the HTML site.
 
-| Key | Action |
-| --- | --- |
-| `→`, `Page Down`, `Space` | Next slide (Space activates focused buttons normally) |
-| `←`, `Page Up` | Previous slide |
-| `Home` / `End` | First / last slide |
-| `G` | Slide outline |
-| `P` | Presenter notes / detailed explanations |
-| `F` | Fullscreen |
-| `R` | Reset the interactive demo on the current slide |
-| `Esc` | Close the open panel |
+## Deploy to Vercel
 
-On phones and tablets, use the bottom arrow controls or swipe horizontally. Slides with longer content can scroll vertically.
+Import this GitHub repository and choose the **Other** framework preset. Set root to `./` and leave build command blank. The site is static.
 
-## Deploy on Vercel
+## Content notes
 
-1. Import this GitHub repository into your Vercel account.
-2. Set **Framework Preset: Other** if Vercel does not detect a framework.
-3. Keep **Root Directory: `./`**.
-4. Leave the **Build Command** blank and deploy.
+- A DFD models information flows, not control-flow steps.
+- XP values, principles and practices are different things.
+- The Scrum board is a teaching visualization, not a required Scrum artifact.
+- A two-week Sprint is illustrative; Scrum Sprints may be up to one month.
+- All patient and project information is fictional.
 
-Vercel will serve the site's `index.html` directly. No environment variables are needed.
+## References
 
-## Project files
+- [Scrum Guide (2020)](https://scrumguides.org/scrum-guide.html)
+- [Agile Alliance: Extreme Programming](https://agilealliance.org/glossary/xp/)
+- [IBM: Data Flow Diagram](https://www.ibm.com/think/topics/data-flow-diagram)
+- Beck, Kent and Andres, Cynthia. *Extreme Programming Explained: Embrace Change*, 2nd ed.
 
-```text
-index.html    38-slide educational presentation and all speaker notes
-styles.css    responsive visual styling, diagrams, slide transitions, print styles
-app.js        slide navigation and interactive teaching simulations
-vercel.json   static deployment configuration
-README.md     setup instructions, sources, and shortcut guide
-```
+## Files
 
-## Pedagogical notes
-
-- The DFDs are **simplified instructional diagrams**, not a complete formal requirements specification. The context diagram is called “Level 0” here; some textbooks number context diagrams differently.
-- XP's **12 classic practices** reflect a common earlier teaching formulation. The second edition of XP reorganizes and updates the practices. **Values, principles, and practices are distinct concepts.**
-- The **14 XP principles** follow Beck and Andres's second edition.
-- Scrum has **three accountabilities**, **three artifacts with commitments**, and **five events** (the Sprint plus the four events inside it), according to the November 2020 Scrum Guide.
-- Task boards are a useful visualization but **not a required official Scrum artifact**.
-- Interactive demos simulate conceptual behavior. The TDD animation is **not a live test runner**, and the Scrum board **does not save state** across refreshes.
-
-## Further reading and academic sources
-
-- [IBM — Data Flow Diagrams](https://www.ibm.com/think/topics/data-flow-diagram)
-- [Lucidchart — DFD notation and diagrams](https://lucid.co/diagram/dfd/tutorial)
-- [The Scrum Guide — Ken Schwaber & Jeff Sutherland, 2020](https://scrumguides.org/scrum-guide.html)
-- [Agile Alliance — Extreme Programming (XP)](https://agilealliance.org/glossary/xp/)
-- [Extreme Programming Alliance — XP practices](https://extremeprogrammingalliance.com/about-extreme-programming-xp/extreme-programming-xp-practices/)
-- Kent Beck & Cynthia Andres, *Extreme Programming Explained: Embrace Change*, 2nd ed. [Publisher information and table of contents](https://www.informit.com/store/extreme-programming-explained-embrace-change-9780134051987).
-
-## License
-
-Educational presentation prepared as an original explanatory work. Third-party references retain their respective copyrights. You may customize and present the source code for coursework; check the source licensing before redistributing portions from other publications.
+- `index.html`: slide content and diagrams
+- `styles.css`: styles and responsive design
+- `app.js`: navigation, teacher notes and simulations
+- `software-engineering-presentation.pptx`: static PowerPoint edition
+- `vercel.json`: static hosting settings

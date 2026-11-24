@@ -24,3 +24,78 @@
 @media(max-width:425px){.slide-inner{padding:23px 17px 22px}.four-grid,.symbol-grid,.value-grid,.recap-grid,.three-grid{grid-template-columns:1fr}.topic-card{min-height:160px}.hero-graphic{width:200px;height:200px}.hero-slide h1{font-size:52px}.cycle-track{grid-template-columns:repeat(2,1fr)}.board-toolbar{gap:10px}.sprint-events,.day-grid{grid-template-columns:1fr}.quiz-option{font-size:14px}.principle-explainer h3{font-size:29px}.source-links a{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media print{.topbar,.controlbar,.overlay,.sidebar,.toast{display:none!important}main{height:auto;overflow:visible}.slide{display:block!important;position:relative;page-break-after:always;break-after:page;min-height:100vh;overflow:visible}.slide-inner{padding:45px}.hero-graphic{max-height:350px}.chapter-art{max-height:350px}@page{size:landscape;margin:0}}
+
+
+/* --- Unslop refinement: a teaching field guide, not a marketing landing page --- */
+:root{--navy:#17272d;--navy2:#20343a;--ink:#243238;--muted:#607078;--bg:#f7f8f6;--panel:#fff;--line:#dbe1de;--accent:#b1e0c7;--cyan:#7cc7b5;--teal:#276e61;--amber:#d59b4c;--orange:#df8e79;--purple:#a79cb4;--radius:10px;--shadow:none}
+html{scroll-behavior:auto}body{font-family:Inter,"Aptos","Segoe UI",system-ui,sans-serif;background:var(--navy)}
+.topbar,.controlbar{background:#14252b;border-color:#34454b}
+.topbar{height:60px;padding:0 clamp(24px,4vw,60px)}
+.brand{font-weight:750;letter-spacing:.06em;font-size:13px;gap:12px}
+.brand-mark{transform:none;gap:3px;width:20px;height:20px}.brand-mark span{background:#a7dac1;border-radius:1px}
+.topbar-center{font-size:11px;letter-spacing:.07em;color:#b9c5c3}
+.topbar .icon-btn{border-color:#43545a;background:transparent;color:#e7efea;border-radius:6px;font-size:12px;padding:9px 12px;font-weight:600;text-decoration:none}
+.topbar .icon-btn:hover{background:#283b40;border-color:#809792}
+.topbar .download-link{color:#182e2c;background:#c7ead6;border:1px solid #c7ead6;font-weight:700}
+.topbar .download-link:hover{background:#e1f3e9;border-color:#e1f3e9}
+main{height:calc(100dvh - 118px)}
+.slide.active{animation:unfade .18s ease both}
+@keyframes unfade{from{opacity:.86}to{opacity:1}}
+.slide.dark{background:#18282e;color:#f1f4f1}.slide.light{background:#f8f9f7;color:var(--ink)}
+.slide-inner{width:min(100%,1400px);padding:clamp(30px,4.7vh,54px) clamp(36px,5.4vw,86px) 30px}
+.slide h2{font-size:clamp(37px,3.8vw,56px);letter-spacing:-.045em;font-weight:740;line-height:1.13;margin:14px 0 25px}
+.slide h2 em,.slide h1 em{font-style:normal;color:#266b60}
+.slide.dark h2 em,.slide.dark h1 em{color:#a8dec6}
+.slide h3{letter-spacing:-.022em;font-weight:700}
+.slide p{line-height:1.5}
+.eyebrow{color:#35756a;font-size:11px;font-weight:730;letter-spacing:.1em;gap:12px}
+.eyebrow-number{letter-spacing:.06em;color:#74827b}.light-eyebrow{color:#acd9c3}
+.lede{font-size:clamp(18px,1.45vw,22px);color:#4b6060;line-height:1.5}
+.bottom-insight,.dark-insight{border-radius:7px;box-shadow:none;padding:13px 18px;font-size:14px}
+.bottom-insight{border-left:3px solid #6aa99a;background:#edf4f0;color:#3e5c56}
+.bottom-insight b,.bottom-insight strong{color:#28695d}
+.dark-insight{border:1px solid #395058;background:#21363e;color:#c9dad4}
+.dark-insight b,.dark-insight strong,.dark-insight em{color:#a7dec6}
+.btn{border-radius:6px;padding:12px 18px;font-weight:700;gap:10px;box-shadow:none!important;transition:background .14s ease,border-color .14s ease}
+.btn:hover{transform:none}.btn.primary{background:#b9e4ce;color:#13382f}.btn.primary:hover{background:#d0eddd}
+.btn.ghost{border-color:#567078;background:transparent;color:#e1eeea}.btn.dark-primary{background:#1c4b47;color:#e3f8e9}
+.nav-btn{border-radius:6px;background:#263c42;color:#eef3ef;border-color:#486064}
+.nav-btn.primary-nav{background:#b7e5cf;color:#18372e;border-color:#b7e5cf}
+.controlbar{height:58px;padding:0 clamp(24px,4vw,60px)}
+.section-indicator{letter-spacing:.08em;color:#c5d0ca}.slide-progress{background:#3b5055;border-radius:0;height:2px}.slide-progress span{background:#a7dec6;transition:width .2s ease}
+/* Cover: meaningful flow instead of orbital effects */
+.hero-ambient,.hero-graphic,.pulse-dot{display:none!important}
+.hero-slide{background:#18282e!important}
+.hero-inner{padding-top:38px}.hero-grid{grid-template-columns:1.04fr .96fr;gap:48px}
+.hero-slide h1{font-size:clamp(60px,5.25vw,82px);letter-spacing:-.058em;line-height:1.07;font-weight:750;max-width:780px;margin:0 0 20px}
+.hero-sub{font-size:clamp(17px,1.43vw,21px);color:#c3d2cc;max-width:575px;line-height:1.54}
+.hero-ctas{margin-top:33px;gap:20px}.microcopy{color:#aebfb7;font-size:12px}
+.hero-footer{color:#a9c1b7;font-size:11px;letter-spacing:.04em;border-top:1px solid #43585a;padding:22px 0 4px}
+.hero-example{width:100%;max-width:580px;background:#20353c;border:1px solid #48605f;border-radius:9px;padding:24px 22px;color:#e5f2eb}
+.hero-example-header{display:flex;justify-content:space-between;color:#bcd6cb;font-weight:700;letter-spacing:.1em;font-size:11px;border-bottom:1px solid #4b6063;padding-bottom:18px}
+.example-rail{display:grid;grid-template-columns:minmax(0,1fr) 15px minmax(0,1fr) 15px minmax(0,1fr);gap:8px;align-items:center;padding:38px 0 32px}
+.example-node{min-height:150px;padding:15px 13px;border:1px solid #60716b;background:#243b40;display:flex;flex-direction:column;justify-content:center;gap:9px;border-radius:4px}
+.example-node span{font-size:10px;letter-spacing:.12em;font-weight:750;color:#a7dec6}.example-node strong{font-size:16px;line-height:1.2}.example-node small{color:#afc3bc;font-size:11px;line-height:1.5}
+.example-node.example-process{background:#d0e9db;color:#153b33;border-color:#d0e9db}
+.example-node.example-process span,.example-node.example-process small{color:#437568}
+.example-arrow{font-size:19px;color:#cbe0d6;text-align:center}
+.hero-example-foot{border-top:1px solid #4b6063;padding-top:15px;color:#c1d6cb;font-size:12px;display:flex;gap:9px;align-items:center}.legend-dot{width:7px;height:7px;border-radius:50%;background:#b4e3cd;display:inline-block}
+/* Reduced decorative variation and uniform card system */
+.topic-card,.topic-card:nth-child(2),.topic-card:nth-child(3),.topic-card:nth-child(4){background:#fff;border:1px solid #dce3df;box-shadow:none;border-radius:9px;min-height:238px;padding:24px}
+.topic-card:nth-child(2),.topic-card:nth-child(3),.topic-card:nth-child(4){box-shadow:none}
+.topic-card h3{font-size:22px;color:#243238;margin:15px 0 8px}
+.topic-card p{font-size:14px;color:#51645e;line-height:1.52}
+.topic-icon{margin-top:21px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;color:#316f63;border:1px solid #cadfd6;border-radius:4px;padding:9px 10px;width:max-content;font-weight:750;line-height:1}
+.topic-index{color:#6a7976;letter-spacing:.06em;font-size:10px}
+.slide [class$="-card"],.slide [class*="-card "]{box-shadow:none;border-radius:10px}
+.slide [class$="-panel"],.slide [class*="-panel "]{box-shadow:none}
+.source-links a,.keyboard-hint span{border-radius:5px}
+.finale{background:#18282e!important}.finale h2{font-size:clamp(57px,5vw,80px)}
+.closing-actions{display:flex;gap:12px;align-items:center;margin-top:23px}
+/* Modal controls stay simple and usable. */
+.sidebar{background:#f8f9f7;color:#253a39}.sidebar .eyebrow{color:#28766b}
+@media(max-width:1050px){.hero-grid{gap:25px}.hero-slide h1{font-size:58px}.hero-example{padding:16px}.example-rail{gap:4px}.example-node{padding:12px 9px}.example-node strong{font-size:13px}}
+@media(max-width:750px){.topbar-center{display:none}.topbar .icon-btn span{display:none}.topbar .download-link span{display:inline}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:28px}.hero-slide h1{font-size:clamp(44px,9vw,64px)}.hero-example{max-width:none}.hero-inner{padding-top:28px}.hero-footer{flex-wrap:wrap}.slide-inner{padding:28px 22px}.slide h2{font-size:clamp(32px,7vw,47px)}.topic-card{min-height:0}.closing-actions{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.slide.active{animation:none}.slide-progress span{transition:none}.btn{transition:none}}
+/* Use the full 16:9 teaching canvas; avoid top-heavy half-empty slides. */
+.slide:not(.hero-slide):not(.finale) .slide-inner{display:flex;flex-direction:column;justify-content:center}
