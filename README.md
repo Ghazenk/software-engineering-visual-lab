@@ -1,54 +1,23 @@
-# Software engineering · field guide
+# Software Engineering — 20 Clear Slides
 
-A 30-slide classroom presentation on four topics:
+A simple, 20-slide HTML presentation with clearly labeled DFD shapes, XP and Scrum explanations, step-by-step DFD/TDD/Scrum simulations, and all 14 XP principles.
 
-1. Data Flow Diagrams (DFDs)
-2. Extreme Programming (XP)
-3. Scrum
-4. The 14 principles of XP
+## Open locally
+Open `index.html` in a browser. No dependencies or build step are required. Use the arrow keys or Previous/Next. Click the simulation buttons to advance slowly, one step at a time.
 
-The same fictional laboratory management system, **MediLab**, is used in every chapter.
+## Export PowerPoint
+Click **Download PPTX** in the header to download `software-engineering-20-slides.pptx`. The supplied PowerPoint uses native editable shapes and text, with static versions of the interactive examples.
 
-## Open the presentation
+## Deploy on Vercel
+Import this GitHub repository as a static project; framework preset **Other**; no build command. Updates to `main` trigger redeploys when Git integration is enabled.
 
-Open `index.html` in a browser. No dependencies, server, or build step are required.
+## Sources / terminology
+- [Official Scrum Guide (2020)](https://scrumguides.org/scrum-guide.html)
+- Kent Beck & Cynthia Andres, *Extreme Programming Explained: Embrace Change* (2nd edition); source of the fourteen XP principles.
 
-- Left/right arrows: previous/next slide
-- **G**: table of contents
-- **P**: speaker notes with teaching explanations
-- **F**: fullscreen
-- **R**: reset the current interactive example
-- **PowerPoint** button: download the static `.pptx` edition
+## Notes
+- MediLab is a fictional lab management example.
+- Interactive demos are teaching illustrations; they do not run a real test suite or store medical records.
+- A DFD shows data movement rather than control-flow logic.
 
-Interactive examples include the context DFD, data movement across a DFD, TDD, XP workflow, pair programming, continuous integration, a Scrum task board, Definition of Done and decision exercises.
-
-## PowerPoint edition
-
-`software-engineering-presentation.pptx` contains one 16:9 slide for each of the 30 HTML slides, plus presenter notes. It preserves the slide appearance as screenshots. PowerPoint cannot run the JavaScript simulations; the screenshots show representative simulation states. This edition is suitable for offline teaching. For live demonstrations, use the HTML site.
-
-## Deploy to Vercel
-
-Import this GitHub repository and choose the **Other** framework preset. Set root to `./` and leave build command blank. The site is static.
-
-## Content notes
-
-- A DFD models information flows, not control-flow steps.
-- XP values, principles and practices are different things.
-- The Scrum board is a teaching visualization, not a required Scrum artifact.
-- A two-week Sprint is illustrative; Scrum Sprints may be up to one month.
-- All patient and project information is fictional.
-
-## References
-
-- [Scrum Guide (2020)](https://scrumguides.org/scrum-guide.html)
-- [Agile Alliance: Extreme Programming](https://agilealliance.org/glossary/xp/)
-- [IBM: Data Flow Diagram](https://www.ibm.com/think/topics/data-flow-diagram)
-- Beck, Kent and Andres, Cynthia. *Extreme Programming Explained: Embrace Change*, 2nd ed.
-
-## Files
-
-- `index.html`: slide content and diagrams
-- `styles.css`: styles and responsive design
-- `app.js`: navigation, teacher notes and simulations
-- `software-engineering-presentation.pptx`: static PowerPoint edition
-- `vercel.json`: static hosting settings
+Design polish informed by [Unslop by Damir Sokolovsky](https://github.com/heydamir/unslop) (CC BY 4.0).
